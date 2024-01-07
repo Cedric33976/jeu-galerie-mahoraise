@@ -1,0 +1,63 @@
+/* Basic CSS for Memory Match Game */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f7f7f7;
+    font-size: 25px; /* Taille de la police augmentée pour tout le texte */
+}
+
+#gameContainer {
+    width: 95%;
+    margin: 20px auto;
+}
+
+#gameUI {
+    margin-bottom: 20px;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+    gap: 10px; /* Space between cards */
+    justify-content: center;
+  background-image: url('plateau.png');
+    background-size: 97%;  /* ou 'contain' ou '100% 100%' selon l'effet désiré */
+    background-repeat: no-repeat;
+background-position: center -80px; /* ajustez le fond légèrement vers le haut */
+ background-position: -60px center; /* ajustez le fond légèrement vers la gauche */
+ 
+}
+
+
+.card {
+    width: 180px; /* Largeur augmentée */
+    height: 120px; /* Hauteur augmentée */
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-size: contain; /* Adjust background size */
+ 
+}
+
+#preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    max-width: 50%; /* ou la taille que vous voulez */
+    max-height: 50%; /* ou la taille que vous voulez */
+    border: 3px solid #fff; /* style optionnel pour le contour de l'aperçu */
+    box-shadow: 0px 0px 10px #000; /* style optionnel pour l'ombre */
+}
+
+/* Styles spécifiques pour le bouton commencer/recommencer */
+.start-button {
+    padding: 30px 60px; /* Plus de padding pour agrandir le bouton */
+    font-size: 40px; /* Plus grande taille de texte */
+    cursor: pointer; /* Style de curseur pour indiquer qu'il s'agit d'un bouton */
+    margin: 10px 0; /* Espacement autour du bouton */
+    /* Ajoutez d'autres styles si nécessaire */
+}
