@@ -1,14 +1,20 @@
-/* Basic CSS for Memory Match Game */
-body {
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f7f7f7;
-    font-size: 25px; /* Taille de la police augmentée pour tout le texte */
 }
 
 #gameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     width: 95%;
-    margin: 20px auto;
+    margin: auto;
 }
 
 #gameUI {
@@ -17,43 +23,34 @@ body {
 
 #gameBoard {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 5 cards per row */
-    gap: 10px; /* Space between cards */
-    justify-content: center;
-
- 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    max-width: 90%;
+    margin: auto;
 }
 
-
 .card {
-    width: 270px; /* Largeur augmentée */
-    height: 180px; /* Hauteur augmentée */
+    height: 120px; /* Adjust height as needed */
     background-color: #ddd;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-size: contain; /* Adjust background size */
- 
+    background-size: contain;
 }
 
-#preview {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    max-width: 50%; /* ou la taille que vous voulez */
-    max-height: 50%; /* ou la taille que vous voulez */
-    border: 3px solid #fff; /* style optionnel pour le contour de l'aperçu */
-    box-shadow: 0px 0px 10px #000; /* style optionnel pour l'ombre */
-}
-
-/* Styles spécifiques pour le bouton commencer/recommencer */
 .start-button {
-    padding: 30px 60px; /* Plus de padding pour agrandir le bouton */
-    font-size: 40px; /* Plus grande taille de texte */
-    cursor: pointer; /* Style de curseur pour indiquer qu'il s'agit d'un bouton */
-    margin: 10px 0; /* Espacement autour du bouton */
-    /* Ajoutez d'autres styles si nécessaire */
+    padding: 15px 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        height: 100px; /* Smaller cards for smaller devices */
+    }
+    .start-button {
+        padding: 10px 20px; /* Smaller buttons for smaller devices */
+    }
 }
