@@ -17,7 +17,7 @@ body {
 
 #gameBoard {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+    grid-template-columns: repeat(4, 1fr); /* 5 cards per row */
     gap: 10px; /* Space between cards */
     justify-content: center;
 
