@@ -1,3 +1,4 @@
+/* Basic CSS for Memory Match Game */
 body, html {
     margin: 0;
     padding: 0;
@@ -13,8 +14,7 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 95%;
-    margin: auto;
+    width: 100vw;
 }
 
 #gameUI {
@@ -23,20 +23,21 @@ body, html {
 
 #gameBoard {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    max-width: 90%;
-    margin: auto;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr)); /* Adjust number of columns based on screen size */
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; /* Max width can be adjusted based on preference */
 }
 
 .card {
-    height: 120px; /* Adjust height as needed */
+    aspect-ratio: 4 / 3; /* Maintain aspect ratio */
     background-color: #ddd;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-size: contain;
+    background-size: cover; /* Cover the whole area of the card */
 }
 
 .start-button {
@@ -48,9 +49,18 @@ body, html {
 
 @media screen and (max-width: 768px) {
     .card {
-        height: 100px; /* Smaller cards for smaller devices */
+        aspect-ratio: 4 / 3; /* Maintain aspect ratio */
     }
     .start-button {
         padding: 10px 20px; /* Smaller buttons for smaller devices */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #gameBoard {
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr)); /* 4 cards in a row for smaller screens */
+    }
+    .card {
+        /* further adjustments if needed */
     }
 }
