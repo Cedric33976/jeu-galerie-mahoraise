@@ -17,10 +17,14 @@ body {
 
 #gameBoard {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 5 cards per row */
+    grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
     gap: 10px; /* Space between cards */
     justify-content: center;
-
+  background-image: url('plateau.png');
+    background-size: 97%;  /* ou 'contain' ou '100% 100%' selon l'effet désiré */
+    background-repeat: no-repeat;
+background-position: center -80px; /* ajustez le fond légèrement vers le haut */
+ background-position: -60px center; /* ajustez le fond légèrement vers la gauche */
  
 }
 

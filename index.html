@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+html <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeu Galerie Mahoraise</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    
     <!-- Préchargement des images des cartes et de l'image recto -->
     <link rel="preload" as="image" href="CACaveiro.png">
     <link rel="preload" as="image" href="cacgreta.png">
@@ -17,25 +17,19 @@
     <link rel="preload" as="image" href="samriga.png">
     <link rel="preload" as="image" href="Sanstitre.png">
     <link rel="preload" as="image" href="recto.png"> <!-- Ajout de l'image recto.png -->
+    <!-- Assurez-vous de mettre à jour les chemins si vos images sont dans un sous-dossier comme "images/" -->
 </head>
 <body>
     <div id="gameContainer">
-        <header>
-            <h1>Jeu Galerie Mahoraise</h1>
-        </header>
-        <section id="gameUI">
-            <p id="instructions">Trouvez toutes les paires le plus rapidement possible ! Cliquez sur 'C'est parti !' pour commencer.</p>
-            <div id="stats">
-                <p id="timer">01:00</p>
-                <p id="score">0 paire trouvée</p>
-            </div>
-            <div id="gameBoard"></div>
-        </section>
-        <footer>
-            <p id="endMessage"></p>
-            <button id="startButton" class="start-button">C'est parti !</button>
-            <button id="restartButton" class="restart-button" style="display:none;">Recommencer</button>
-        </footer>
+        <p id="instructions">Trouvez toutes les paires le plus rapidement possible ! Cliquez sur 'C'est parti !' pour commencer.</p>
+        <div id="gameUI">
+            <p id="timer">01:00</p>
+            <p id="score">0 paire trouvée</p>
+        </div>
+        <div id="gameBoard"></div>
+        <p id="endMessage"></p>
+        <button id="startButton" class="start-button">C'est parti !</button>
+        <button id="restartButton" class="restart-button" style="display:none;">Recommencer</button>
     </div>
     <script src="script.js"></script>
 </body>
