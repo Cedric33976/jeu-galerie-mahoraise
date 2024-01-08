@@ -26,8 +26,8 @@ body {
 
 
 .card {
-    width: 180px; /* Largeur augmentée */
-    height: 120px; /* Hauteur augmentée */
+    width: 270px; /* Largeur augmentée */
+    height: 180px; /* Hauteur augmentée */
     background-color: #ddd;
     display: flex;
     justify-content: center;
