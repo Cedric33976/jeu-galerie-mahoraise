@@ -17,9 +17,8 @@ body {
 
 #gameBoard {
     display: grid;
-     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 50px; /* Espace entre les cartes */
+    grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+    gap: 10px; /* Space between cards */
     justify-content: center;
    
 }
@@ -56,4 +55,10 @@ body {
     cursor: pointer; /* Style de curseur pour indiquer qu'il s'agit d'un bouton */
     margin: 10px 0; /* Espacement autour du bouton */
     /* Ajoutez d'autres styles si nécessaire */
+}
+h1 {
+    font-size: 2em; /* 2em est généralement le double de la taille de la police de base */
+    font-weight: bold; /* Rend le texte en gras */
+    text-align: center; /* Centrer le titre */
+    /* Autres styles selon vos besoins */
 }
